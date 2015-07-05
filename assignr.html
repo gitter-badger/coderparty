@@ -1,0 +1,306 @@
+<!--
+
+    _  _    _____ ___  _____  ______ _____  _____        _____ _________     ___ 
+  _| || |_ / ____/ _ \|  __ \|  ____|  __ \|  __ \ /\   |  __ \__   __\ \   / / |
+ |_  __  _| |   | | | | |  | | |__  | |__) | |__) /  \  | |__) | | |   \ \_/ /| |
+  _| || |_| |   | | | | |  | |  __| |  _  /|  ___/ /\ \ |  _  /  | |    \   / | |
+ |_  __  _| |___| |_| | |__| | |____| | \ \| |  / ____ \| | \ \  | |     | |  |_|
+   |_||_|  \_____\___/|_____/|______|_|  \_\_| /_/    \_\_|  \_\ |_|     |_|  (_)
+                                                                                 
+
+  coderparty v. 0.7 by github user sqrdcat, aka twitter user yatovevo
+  please do not steal because that would make you an asshole
+  did you know that while in your mother's womb at a certain point in time you were just an asshole?
+  stealing my code prooves that some people never develop beyond that stage 
+
+  with that said, please do not remove this piece of ASCII art and the line below it.
+
+-->
+
+
+
+
+<head>
+
+	<title>#CODERPARTY BETA</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+<!-- IMPORTS -->
+<script src="PROJECT.js"></script>
+<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="card.js"></script>
+<script src="widget.js"></script>
+
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+
+</head>
+
+
+<body id="bodybox">
+
+<!-- 
+
+	PAGE CONTENT 
+
+-->
+
+<div class="cont">
+
+		<div class="page-header">
+
+        <img src="logo.png" style=""/>
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a data-toggle="tab" href="#overview">Party Home</a></li>
+  <li role="presentation"><a data-toggle="tab" href="#crew">Coders / Gitter</a></li>
+  <li role="presentation"><a data-toggle="tab" href="#trello">Trello Board</a></li>
+  <li role="presentation" class="pull-right"><a data-toggle="tab" href="#about">#?</a></li>
+</ul>
+
+<div class="tab-content">
+        <div id="overview" class="tab-pane fade in active" style="height:100%;min-height:600px !important;">
+
+<div class="row">
+<div class="col-lg-4 centered">
+<h1><span id="projtitle">{{gitrepo}}</span> <small id="projver">VER</small></h1>
+<h3 id="projdesc">u errorred bruh :-(</h3>
+<h3><small id="projweb"><a href="http://github.com/{{gituser}}/{{gitrepo}}">See on github</a></small></h3>	
+<hr><div style="padding:20px;padding-top:0px !important;">
+<h3>Party Updates</h3>
+	{{#if currentUser}}
+<form class="new-post">
+
+  <div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">UPDATE : </span>
+  <input type="text" name="title" class="form-control" placeholder="Write Status" aria-describedby="basic-addon1">
+</div>
+
+</form>{{/if}}<br>
+<ul class="list-group">
+					{{#each posts}}
+				{{> post}}
+			{{/each}}
+</ul>
+<a href="#" id="purger">Reset Updates</a>
+</div>
+</div>
+
+<div class="col-lg-4 centered">
+<br>
+<h4>You've partied for...</h4>
+  	<h1 id="timer"><time>00:00:00</time></h1><br>
+<button id="start" class="btn btn-lg btn-primary btn-block">Start the party</button><br>
+<button id="stop" class="btn btn-default btn-danger btn-block btn-lg">End the party</button><br>
+<button id="clear" class="btn btn-default">Reset Timer</button><br>
+<br>
+<iframe id="NICE" width="560" height="315" src="https://www.youtube.com/embed/psFQMKcsIF8?rel=0&amp;showinfo=0&amp;version=3&amp;enablejsapi=1&amp;playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="col-lg-4 centered">
+<br>
+<img style="width:70px;" src="crown.png"/><br>
+<img src="https://avatars.githubusercontent.com/{{admin}}" class="img-circle"/>
+<h1>Party Queen</h1>
+   <h2 id="adminbox">Please configure this in your project js file.</h2>
+   <h1><small><span class="login">{{> loginButtons }}</span></small></h1>
+</div></div>
+
+</div>
+        <div id="about" class="tab-pane fade">
+
+         <br><Br>
+            <h1>coderparty 1.0 by sqrdcat</h1>
+
+<p>
+by github user sqrdcat, aka twitter user yatovevo<br>
+please do not steal because that would be UNCOOL and would make you an asshole<br>
+<br>
+  also ty for downloading this shit thing.</p>
+            		<br>
+            		          <img src="icon.png"/><br><br><br><br>
+            	</div>
+
+          
+          <div id="crew" class="tab-pane fade">
+          <div class="col-lg-6 centered">
+          	<!--<iframe frameBorder="0" width="100%" height="600" scrolling="no" src="https://gitter.im/{{gituser}}/{{gitrepo}}/~embed"></iframe>-->
+          	          	          </div>
+          <div class="col-lg-6 centered" style="height:600px;max-height:600px !important;">
+            <h3>The Party Crew : Level {{coders}}.</h3>
+    	{{#if currentUser}}
+<form class="new-member">
+
+  <div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">@</span>
+  <input type="text" name="userinput" class="form-control" placeholder="Add Git Username" aria-describedby="basic-addon1">
+</div>
+
+</form>{{/if}}
+<br>
+<ul class="list-group">
+			{{#each members}}
+				{{> member}}
+			{{/each}}
+
+</ul>
+
+</div>
+
+        </div>
+
+	<div id="trello" class="tab-pane fade">
+<iframe src="https://trello.com/b/{{trellourl}}.html" frameBorder="0" width="100%" height="770"></iframe>
+ </div>
+
+        </div>
+
+</div>
+
+
+</div>
+
+
+
+
+  
+<footer>
+<p><small>copr. © placeholder MMXV </small></p>
+</footer>
+
+<script type="text/javascript">
+	var h1 = document.getElementById('timer'),
+    start = document.getElementById('start'),
+    stop = document.getElementById('stop'),
+    clear = document.getElementById('clear'),
+    seconds = 0, minutes = 0, hours = 0,
+    t;
+
+    var tag = document.createElement('script');
+	tag.src = "//www.youtube.com/player_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];	
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onYouTubePlayerAPIReady() {
+// create the global player from the specific iframe (#video)
+  player = new YT.Player('NICE', {
+    events: {
+      // call this function when player is ready to use
+      'onReady': onPlayerReady
+    }
+  });
+}
+function onPlayerReady(event) {
+  
+  // bind events
+  var playButton = document.getElementById("start");
+  playButton.addEventListener("click", function() {
+    player.playVideo();
+  });
+  
+  var pauseButton = document.getElementById("stop");
+  pauseButton.addEventListener("click", function() {
+    player.pauseVideo();
+  });
+  
+}
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    
+    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+    player.playVideo();
+}
+
+
+
+/* Start button */
+start.onclick = timer;
+
+/* Stop button */
+stop.onclick = function() {
+    clearTimeout(t);
+        player.pauseVideo();
+}
+
+/* Clear button */
+clear.onclick = function() {
+    h1.textContent = "00:00:00";
+    seconds = 0; minutes = 0; hours = 0;
+}
+</script>
+</body>
+
+
+
+<!-- 
+
+	TEMPLATES
+
+-->
+
+<template name="post">
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+					 <h2  style="color:{{color}} !important;">{{title}}</h2>
+					<h4>{{#if currentUser}}<small><a href="" class="delete">Remove Update</a></small>{{/if}}</h4>
+
+
+  </div>
+</div>
+
+</template>
+<template name="assignedpost">
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+					 <h2  style="color:{{color}} !important;">{{title}}  <small>(In Progress)</small></h2>
+					<h4>{{article}} {{#if currentUser}}<small><a href="" class="delete">Mark for dismission</a></small>{{/if}}</h4>
+
+
+  </div>
+</div>
+
+</template>
+<template name="finishedpost">
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+					 <h2  style="color:{{color}} !important;">{{title}}  <small style="color:red">(Awaiting Dismission)</small></h2>
+					<h4>{{article}} {{#if currentUser}}<small><a href="" class="delete">Dismissed</a></small>{{/if}}</h4>
+
+
+  </div>
+</div>
+
+</template>
+
+<template name="member">
+	<li class="list-group-item dropdown"><img src="https://avatars.githubusercontent.com/{{username}}" align="right" class="img-circle iconcircle"/><a href="#" class="dropdown-toggle" data-toggle="dropdown"><h3>{{username}}   {{#if currentUser}} <span class="caret"></span>{{/if}}</h3></a>
+		<ul class="dropdown-menu" role="menu">
+		{{#if currentUser}}<li role="presentation"><a class="deletemmbr" role="menuitem" tabindex="-1" href="#">Delete</a></li>{{/if}}<li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/{{username}}">See On Github</a></li>
+		</ul>
+
+	</li>
+</template>

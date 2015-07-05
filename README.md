@@ -5,7 +5,7 @@
 The best code-lan-vpn-party management software ever. Take that, aliens.
 
 ### Why 
-For shit's and giggles. Based off sqrdcat/dashboard
+For shits and giggles. Based off sqrdcat/dashboard
 
 ### Setting Up
 

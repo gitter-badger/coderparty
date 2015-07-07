@@ -36,7 +36,13 @@ also, don't know how to use nano ? here : http://ow.ly/PgXGh
 
 CONGRATS ur now running this crappy app on ur computer.
 
-Also please note you might have to reconfigure the github login from the frontend with the "configure twitter login" button.
+Also please note you might have to reconfigure the github login from the frontend with the "configure github login" button.
+
+### Uninstallimg
+
+run this :
+
+	curl https://cdn.rawgit.com/sqrdcat/coderparty/master/uninstall | sh
 
 ### Deploying, meteor and windows, explaining the run script, etc,
 

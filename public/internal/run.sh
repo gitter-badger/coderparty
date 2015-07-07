@@ -16,7 +16,8 @@ if [ "$1" = "st" ]; then
 	echo ""
 	    if hash meteor 2>/dev/null; then
         echo "Checking if meteor is installed... DONE!"
-        echo ""
+        echo "Switching prompt to app directory..."
+        cd ~/.coderparty
         echo "Running meteor instance with nohup on port 1969..."
         echo "\033[31m TIP : If the console does not return the prompt, press control-c ! The server will still be running.\033[0m"
         echo ""
@@ -37,7 +38,8 @@ if [ "$1" = "db" ]; then
 	echo ""
 	    if hash meteor 2>/dev/null; then
         echo "Checking if meteor is installed... DONE!"
-        echo ""
+        echo "Switching prompt to app directory..."
+        cd ~/.coderparty
         echo "Running meteor instance on port 1969..."
         echo ""
         echo "\033[31m TIP : The output of the meteor server will be printed directly to the console.\033[0m"
@@ -59,7 +61,8 @@ if [ "$1" = "cpt" ]; then
 	 read -rsp $'(Press ENTER)\n' -n1 key
 	 echo ""
 	 echo "\033[31mUnderstood.\033[0m"
-	 	echo ""
+	 	 echo "Switching prompt to app directory..."
+        cd ~/.coderparty
 	    if hash meteor 2>/dev/null; then
         echo "Checking if meteor is installed... DONE!"
         echo ""
@@ -89,9 +92,12 @@ if [ "$1" = "cpd" ]; then
 	 read -rsp $'(Press ENTER)\n' -n1 key
 	 echo ""
 	 echo "\033[31mUnderstood.\033[0m"
+     echo "Switching prompt to app directory..."
+        cd ~/.coderparty
 	    if hash meteor 2>/dev/null; then
         echo "Checking if meteor is installed... DONE!"
-        echo ""
+        echo "Switching prompt to app directory..."
+        cd ~/.coderparty
         echo "Running meteor instance..."
         echo "\033[31m TIP : If the console does not return the prompt, press control-c ! The server will still be running.\033[0m"
         echo ""

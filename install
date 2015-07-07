@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# MODULAR INSTALLER SCRIPT BY SQRDCAT
+# FREE AS IN FREE BEER
+
+# USER HOW-TO: RUN THIS : "sh install"
+# DEVELOPER HOW-TO: DOWNLOAD, EDIT, PROVIDE
+
+echo "Install script for $REPO "
+
+ if hash meteor 2>/dev/null; then
+        echo "Checking if meteor is installed... DONE!"
+		sleep 0.5
+		echo -e "\033[31m[INSTALLER]\033[0m -- \033[32mCloning repo...\033[0m"
+		git clone https://github.com/sqrdcat/coderparty.git
+		sleep 1
+		echo -e "\033[31m[INSTALLER]\033[0m -- \033[32mMoving files...\033[0m"
+		mv coderparty .coderparty
+		mv .coderparty ~/
+		echo "\033[31m[INSTALLER]\033[0m -- \033[32mCreating bash alias file in your home directory...\033[0m"
+        alias coderparty="bash ~/.coderparty/run"
+        touch ~/.bash_aliases
+        echo 'alias coderparty="~/.coderparty/public/internal/run.sh"' >> ~/.bash_aliases
+        echo ""
+        echo "Coderparty has attempted to install itself on your computer."
+		echo "If you have encountered any error messages please open an issue or contact me."
+		echo "Please try running the app with '$ coderparty'"    
+    else
+        echo "Please install meteor by going to http://install.meteor.com and following the isntructions in the sh script, then execute this command again."
+    fi

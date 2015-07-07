@@ -11,7 +11,7 @@ For shits and giggles. Based off sqrdcat/dashboard
 
 1. make sure git is installed and run this in ur terminal of choice
 
-	wget https://rawgit.com/sqrdcat/coderparty/master/install | sh install
+	wget https://rawgit.com/sqrdcat/coderparty/master/install && sh install
 
 3. that's it. now restart your terminal and run coderparty
 
@@ -42,7 +42,7 @@ Also please note you might have to reconfigure the github login from the fronten
 
 run this :
 
-	wget https://rawgit.com/sqrdcat/coderparty/master/uninstall | sh uninstall
+	wget https://rawgit.com/sqrdcat/coderparty/master/uninstall && sh uninstall
 
 ### Deploying, meteor and windows, explaining the run script, etc,
 

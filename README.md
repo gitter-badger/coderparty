@@ -7,15 +7,13 @@ The best code-lan-vpn-party management software ever. Take that, aliens.
 ### Why 
 For shits and giggles. Based off sqrdcat/dashboard
 
-### Setting Up
+### Setup A ( the stupidly simple edition )
 
 1. make sure git is installed and run this in ur terminal of choice
 
-	wget https://rawgit.com/sqrdcat/sh/cp/in.sh && bash in.sh
+	curl https://cdn.rawgit.com/sqrdcat/coderparty/master/install | sh
 
-2. now go to ur brand new coderparty folder and execute this :
-	
-	./run st
+3. that's it. now restart your terminal and run coderparty
 
 here's a list of arguments for ur use
 
@@ -24,14 +22,24 @@ here's a list of arguments for ur use
 	cpt 4949 -	starts the server with the custom port 4949 (starts in background)
 	cpd 4949 -	starts the server with the custom port 4949, printing the logs directly to the console.
 
-3. Mandatory Configuration
+also, don't know how to use nano ? here : http://ow.ly/PgXGh
 
-Unless you want to keep the default project details and let me get ALL the fame, edit PROJECT.js in the public directory.
+### Setup B ( the less smart but simple edition)
 
-4. CONGRATS ur now running this crappy app on ur computer.
+1. Download and extract
+
+2. Install meteor
+
+3. In the folder you extracted the files, run 'meteor'
+
+4. If you want an alias, create a file named '.bash_aliases' and make an alias that runs "/EXTRACTED_FOLDER/public/internal/run.sh", and change EXTRACTED_FOLDER to your path then restart.
+
+CONGRATS ur now running this crappy app on ur computer.
 
 Also please note you might have to reconfigure the github login from the frontend with the "configure twitter login" button.
 
 ### Deploying, meteor and windows, explaining the run script, etc,
 
 Look here : http://github.com/sqrdcat/dashboard
+
+Keep in mind this thing might be vastly outdated. especially in regards of the run script.

@@ -5,8 +5,8 @@
 
 # USER HOW-TO: RUN THIS : "sh install"
 # DEVELOPER HOW-TO: DOWNLOAD, EDIT, PROVIDE
-
-echo "Install script for $REPO "
+echo ""
+echo "Install script for coderparty"
 
  if hash meteor 2>/dev/null; then
         echo "Checking if meteor is installed... DONE!"
@@ -22,6 +22,8 @@ echo "Install script for $REPO "
         touch ~/.bash_aliases
         echo 'alias coderparty="~/.coderparty/public/internal/run.sh"' >> ~/.bash_aliases
         echo ""
+        echo "Launching nano..."
+        nano ~/.coderparty/public/PROJECT.js
         echo "Coderparty has attempted to install itself on your computer."
 		echo "If you have encountered any error messages please open an issue or contact me."
 		echo "Please restart / re-open your terminal and run coderparty"    

@@ -11,7 +11,7 @@ For shits and giggles. Based off sqrdcat/dashboard
 
 1. make sure git is installed and run this in ur terminal of choice
 
-	curl https://rawgit.com/sqrdcat/coderparty/master/install | sh
+	wget https://rawgit.com/sqrdcat/coderparty/master/install | sh install
 
 3. that's it. now restart your terminal and run coderparty
 
@@ -28,7 +28,7 @@ also, don't know how to use nano ? here : http://ow.ly/PgXGh
 
 1. Download and extract
 
-2. Install meteor
+2. Go to http://install.meteor.com and follow the instructions
 
 3. In the folder you extracted the files, run 'meteor'
 
@@ -42,7 +42,7 @@ Also please note you might have to reconfigure the github login from the fronten
 
 run this :
 
-	curl https://rawgit.com/sqrdcat/coderparty/master/uninstall | sh
+	wget https://rawgit.com/sqrdcat/coderparty/master/uninstall | sh uninstall
 
 ### Deploying, meteor and windows, explaining the run script, etc,
 
